@@ -1,0 +1,28 @@
+{
+  "name": "homebrewhaven",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": { 
+  "start": "node server.js",
+  "dev": "node --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthew-m-morton/HomebrewHaven.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthew-m-morton/HomebrewHaven/issues"
+  },
+  "homepage": "https://github.com/matthew-m-morton/HomebrewHaven#readme",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "ejs": "^7.0.2",
+    "express": "^5.3.0",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}

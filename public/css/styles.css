@@ -1,0 +1,4 @@
+body { font-family: system-ui, sans-serif; margin: 0; }
+header, footer { padding: 1rem; background: #2b1d14; color: #f3e9d2; }
+header a { color: inherit; margin-right: 1rem; }
+main { padding: 1rem; max-width: 960px; margin: auto; }
