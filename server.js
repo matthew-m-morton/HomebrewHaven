@@ -7,6 +7,7 @@ import indexRoutes from './src/routes/index.js';
 import pool from './src/database/db.js';
 import { requestLogger } from './src/middleware/requestLogger.js';
 import { notFound, errorHandler } from './src/middleware/errorHandler.js';
+import authRoutes from './src/routes/authRoutes.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -26,7 +27,10 @@ if (process.env.NODE_ENV !== 'production') {
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/', indexRoutes);
+app.use('/', authRoutes);
 
+
+// error handling
 app.use(notFound);
 app.use(errorHandler);
 
