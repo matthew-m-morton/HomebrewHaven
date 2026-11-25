@@ -4,6 +4,7 @@ import expressLayouts from 'express-ejs-layouts';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import indexRoutes from './src/routes/index.js';
+import pool from './src/database/db.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -19,4 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/', indexRoutes);
 
+app.listen(PORT, () => console.log(`Homebrew Haven running on http://localhost:${PORT}`));
+
+await pool.query('SELECT 1');
 app.listen(PORT, () => console.log(`Homebrew Haven running on http://localhost:${PORT}`));
