@@ -1,0 +1,8 @@
+<section class="card error-card">
+  <h1><%= status %>: <%= title %></h1>
+  <p><%= message %></p>
+  <p><a href="/">Back to the main hall</a></p>
+  <% if (stack) { %>
+    <pre class="stack"><%= stack %></pre>
+  <% } %>
+</section>
