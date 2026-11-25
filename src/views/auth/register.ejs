@@ -1,0 +1,25 @@
+<section class="card form-card">
+  <h1>Create an account</h1>
+
+  <form action="/register" method="POST" novalidate>
+    <label for="username">Username</label>
+    <input id="username" name="username" value="<%= values.username || '' %>"
+           autocomplete="username" required maxlength="30">
+    <% if (errors.username) { %><p class="field-error"><%= errors.username.msg %></p><% } %>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" value="<%= values.email || '' %>"
+           autocomplete="email" required>
+    <% if (errors.email) { %><p class="field-error"><%= errors.email.msg %></p><% } %>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="new-password" required>
+    <% if (errors.password) { %><p class="field-error"><%= errors.password.msg %></p><% } %>
+
+    <label for="confirmPassword">Confirm password</label>
+    <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required>
+    <% if (errors.confirmPassword) { %><p class="field-error"><%= errors.confirmPassword.msg %></p><% } %>
+
+    <button type="submit">Create account</button>
+  </form>
+</section>
