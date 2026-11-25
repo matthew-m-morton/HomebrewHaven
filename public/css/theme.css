@@ -16,6 +16,12 @@
 
   --radius: 10px;
   --shadow: 0 4px 12px rgb(43 29 20 / 0.25);
+
+  --success-bg: rgb(222 239 214 / 0.95);
+  --success-text: #2f5a24;
+  --error-bg: rgb(246 220 210 / 0.95);
+  --error-text: #7a2410;
+
 }
 
 [data-theme="night"] {
