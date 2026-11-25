@@ -1,0 +1,27 @@
+:root,
+[data-theme="tavern"] {
+  --bg-image: url('/images/tavern-bg.webp');
+  --overlay: rgb(255 248 235 / 0.35);
+
+  --surface: rgb(255 252 245 / 0.92);
+  --surface-border: #c9a97a;
+  --text: #2b1d14;
+  --text-muted: #6b5443;
+
+  --accent: #8b3a1e;
+  --accent-contrast: #fff8ec;
+
+  --header-bg: rgb(43 29 20 / 0.9);
+  --header-text: #f3e9d2;
+
+  --radius: 10px;
+  --shadow: 0 4px 12px rgb(43 29 20 / 0.25);
+}
+
+[data-theme="night"] {
+  --overlay: rgb(15 10 8 / 0.6);
+  --surface: rgb(38 28 22 / 0.92);
+  --surface-border: #5a4332;
+  --text: #f3e9d2;
+  --text-muted: #c2ad94;
+}
