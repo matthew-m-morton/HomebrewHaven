@@ -34,3 +34,14 @@ export const createUser = async ({ username, email, passwordHash }) => {
   }
   throw new Error('Could not generate a unique friend code');
 };
+
+export const findUserById = async (id) => {
+  const { rows } = await pool.query(
+    `SELECT u.id, u.username, u.email, u.friend_code, u.created_at, r.name AS role
+     FROM users u
+     JOIN roles r ON r.id = u.role_id
+     WHERE u.id = $1`,
+    [id]
+  );
+  return rows[0] ?? null;
+};

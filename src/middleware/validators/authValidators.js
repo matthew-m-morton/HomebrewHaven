@@ -27,3 +27,8 @@ export const registerRules = [
     .custom((value, { req }) => value === req.body.password)
     .withMessage('Passwords do not match.'),
 ];
+
+export const loginRules = [
+  body('email').trim().isEmail().withMessage('Enter a valid email address.').toLowerCase(),
+  body('password').notEmpty().withMessage('Enter your password.'),
+];
