@@ -1,3 +1,5 @@
+const TITLES = { 400: 'Bad request', 403: 'Access denied', 500: 'Something went wrong' };
+
 export const notFound = (req, res, next) => {
   const err = new Error(`Not found: ${req.originalUrl}`);
   err.status = 404;
@@ -18,7 +20,7 @@ export const errorHandler = (err, req, res, next) => {
   }
 
   res.render('errors/error', {
-    title: 'Something went wrong',
+    title: TITLES[status] || 'Something went wrong',
     status,
     message: status < 500 ? err.message : 'An unexpected error occurred.',
     stack: isProd ? null : err.stack,

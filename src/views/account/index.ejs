@@ -1,0 +1,21 @@
+<section class="card form-card">
+  <h1>Your account</h1>
+
+  <dl class="details">
+    <dt>Username</dt>
+    <dd><%= currentUser.username %></dd>
+
+    <dt>Email</dt>
+    <dd><%= currentUser.email %></dd>
+
+    <dt>Role</dt>
+    <dd class="role-badge role-<%= currentUser.role %>"><%= currentUser.role %></dd>
+
+    <dt>Member since</dt>
+    <dd><%= new Date(currentUser.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %></dd>
+  </dl>
+
+  <h2>Your friend code</h2>
+  <p class="friend-code"><%= currentUser.friend_code %></p>
+  <p class="card-meta">Share this so party leaders can invite you.</p>
+</section>
