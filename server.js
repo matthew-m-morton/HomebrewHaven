@@ -11,6 +11,9 @@ import authRoutes from './src/routes/authRoutes.js';
 import { sessionMiddleware } from './src/middleware/session.js';
 import { flash } from './src/middleware/flash.js';
 import { sessionUser } from './src/middleware/sessionUser.js';
+import accountRoutes from './src/routes/accountRoutes.js';
+import adminRoutes from './src/routes/adminRoutes.js';
+
 
 
 
@@ -37,7 +40,8 @@ app.use(sessionUser);
 
 app.use('/', indexRoutes);
 app.use('/', authRoutes);
-
+app.use('/', accountRoutes);
+app.use('/', adminRoutes);
 
 // error handling
 app.use(notFound);

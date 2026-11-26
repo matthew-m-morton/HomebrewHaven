@@ -105,3 +105,18 @@ main {
 .flash { padding: 0.75rem 1rem; border-radius: var(--radius); margin-bottom: 1rem; box-shadow: var(--shadow); }
 .flash-success { background: var(--success-bg); color: var(--success-text); }
 .flash-error { background: var(--error-bg); color: var(--error-text); }
+
+
+.details { display: grid; grid-template-columns: max-content 1fr; gap: 0.4rem 1rem; }
+.details dt { font-weight: 600; color: var(--text-muted); }
+.details dd { margin: 0; }
+
+.role-badge {
+  justify-self: start;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}

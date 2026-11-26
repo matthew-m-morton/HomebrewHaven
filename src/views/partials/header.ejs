@@ -2,6 +2,9 @@
   <nav class="nav-left">
     <a href="/" class="logo">Homebrew Haven</a>
     <a href="/browse">Browse</a>
+    <% if (locals.currentUser && currentUser.role === 'admin') { %>
+      <a href="/admin">Admin</a>
+    <% } %>
   </nav>
 
   <nav class="nav-right">
