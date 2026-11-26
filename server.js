@@ -12,13 +12,15 @@ import { sessionMiddleware } from './src/middleware/session.js';
 import { flash } from './src/middleware/flash.js';
 import { sessionUser } from './src/middleware/sessionUser.js';
 
-const isProd = process.env.NODE_ENV === 'production';
-if (isProd) app.set('trust proxy', 1);
+
 
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 3000;
+const isProd = process.env.NODE_ENV === 'production';
+
+if (isProd) app.set('trust proxy', 1);
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
