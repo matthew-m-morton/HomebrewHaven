@@ -1,0 +1,20 @@
+<section class="card form-card">
+  <h1>Delete your account</h1>
+  <p>This permanently deletes your account along with all your entries, ratings, and party memberships.
+     Copies other users made of your public entries stay in their collections. <strong>This can't be undone.</strong></p>
+
+  <% if (errors.form) { %><p class="field-error"><%= errors.form.msg %></p><% } %>
+
+  <form method="post" action="/account/delete" class="stack" novalidate>
+    <label for="confirm">Type <strong><%= confirmPhrase %></strong> to confirm</label>
+    <input id="confirm" name="confirm" type="text" autocomplete="off" value="<%= values.confirm || '' %>">
+    <% if (errors.confirm) { %><p class="field-error"><%= errors.confirm.msg %></p><% } %>
+
+    <label for="password">Your password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password">
+    <% if (errors.password) { %><p class="field-error"><%= errors.password.msg %></p><% } %>
+
+    <button type="submit" class="button-danger">Delete my account</button>
+    <a href="/account">Cancel</a>
+  </form>
+</section>

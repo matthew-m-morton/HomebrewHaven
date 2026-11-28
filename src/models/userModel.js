@@ -45,3 +45,14 @@ export const findUserById = async (id) => {
   );
   return rows[0] ?? null;
 };
+
+export async function countAdmins() {
+  const { rows } = await pool.query(
+    `SELECT COUNT(*)::int AS n FROM users u JOIN roles r ON r.id = u.role_id WHERE r.name = 'admin'`);
+  return rows[0].n;
+}
+
+export async function deleteUserById(id) {
+  const { rowCount } = await pool.query('DELETE FROM users WHERE id = $1', [id]);
+  return rowCount === 1;
+}
