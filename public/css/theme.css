@@ -21,7 +21,8 @@
   --success-text: #2f5a24;
   --error-bg: rgb(246 220 210 / 0.95);
   --error-text: #7a2410;
-
+  --danger: #a12a2a;
+  --danger-contrast: #ffffff;
 }
 
 [data-theme="night"] {
@@ -30,4 +31,6 @@
   --surface-border: #5a4332;
   --text: #f3e9d2;
   --text-muted: #c2ad94;
+  --danger: #a12a2a;
+  --danger-contrast: #ffffff;
 }
